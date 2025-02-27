@@ -1,6 +1,6 @@
 import { config } from '../../config';
 
-export interface Hello {
+export interface ISearchRespose {
   id: string;
   name: string;
   artists: string;
@@ -15,7 +15,7 @@ export interface SearchParams {
   page?: number;
 }
 
-export const search = async ({ query, page = 1, per_page = 10 }: SearchParams): Promise<Hello[]> => {
+export const search = async ({ query, page = 1, per_page = 10 }: SearchParams): Promise<ISearchRespose[]> => {
   if (!query) {
     return [];
   }

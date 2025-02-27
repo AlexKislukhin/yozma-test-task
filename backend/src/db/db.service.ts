@@ -5,11 +5,10 @@ import { SearchHistory } from 'src/search/entities/search.entity';
 
 type DBType = {
   favorites: Favorite[];
-  users: Record<string, any>[];
   searchHistory: SearchHistory[];
 };
 
-const DEFAULT_VALUES: DBType = { favorites: [], users: [], searchHistory: [] };
+const DEFAULT_VALUES: DBType = { favorites: [], searchHistory: [] };
 
 const DB_PATH = `${__dirname}/db.json`;
 
